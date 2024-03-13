@@ -1,6 +1,6 @@
 public class Data {
     private String matkul;
-    private String tugas;
+    String tugas;
     private String deadline;
 
     public Data(String matkul, String tugas, String deadline) {

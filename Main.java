@@ -42,18 +42,14 @@ public class Main {
 
                         System.out.print("Masukkan Nama Tugas: ");
                         String namaTugas = s.nextLine();
-                        System.out.print("Masukkan Mata Kuliah: ");
-                        String namaMatkul = s.nextLine();
                         ListIterator<Data> iterator = listData.listIterator();
                         while (iterator.hasNext()) {
-                            Data ob = iterator.next();
-                            if (ob.getTugas().equalsIgnoreCase(namaTugas)
-                                    && ob.getTugas().equalsIgnoreCase(namaMatkul)) {
-                                iterator.remove();
+                            if (iterator.next().tugas.equals(namaTugas)) {
                                 break;
                             }
-                            break;
                         }
+                        iterator.remove();
+                        break;
                     } else {
                         System.out.println("Pilihan Tidak Tersedia");
                         continue;
